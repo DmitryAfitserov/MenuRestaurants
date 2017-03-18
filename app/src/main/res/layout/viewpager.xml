@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    >
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:id="@+id/tab_lineral_layout"
+        android:layout_alignParentBottom="true"
+        android:background="#dddddd"
+
+        app:layout_constraintLeft_toLeftOf="@+id/viewpager"
+        app:layout_constraintRight_toRightOf="@+id/viewpager"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabMode="fixed"
+            android:layout_gravity="center"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:background="#dddddd"
+            app:tabTextAppearance="@style/CustomTextStyle"
+            android:minHeight="?attr/actionBarSize"/>
+
+
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/tab_lineral_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/tab_lineral_layout" />
+
+</android.support.constraint.ConstraintLayout>
